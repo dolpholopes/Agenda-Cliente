@@ -1,7 +1,9 @@
 package com.example.agendacliente.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -13,6 +15,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.example.agendacliente.MainActivity;
 import com.example.agendacliente.R;
 import com.example.agendacliente.model.Agendamento;
 import com.example.agendacliente.util.DialogProgress;
@@ -29,7 +32,7 @@ public class AgendamentoServicoActivity extends AppCompatActivity implements Vie
 
     private ArrayList<String> data = new ArrayList<String>();
     private EditText editNome, editTelefone;
-    private CheckBox checkWpp, checkCorte, checkBarba;
+    private CheckBox checkWpp, checkCorte, checkBarba, checkPigmentar, checkPlatinar;
     private CardView cardViewAgendar;
 
 
@@ -45,8 +48,12 @@ public class AgendamentoServicoActivity extends AppCompatActivity implements Vie
         checkWpp = findViewById(R.id.checkAgendamentoWpp);
         checkBarba = findViewById(R.id.checkBarba);
         checkCorte = findViewById(R.id.checkCorte);
+        checkPigmentar = findViewById(R.id.checkPigmentacao);
+        checkPlatinar = findViewById(R.id.checkPlatinacao);
         cardViewAgendar = findViewById(R.id.cardViewAgendar);
+
         cardViewAgendar.setOnClickListener(this);
+
     }
 
 
@@ -71,6 +78,8 @@ public class AgendamentoServicoActivity extends AppCompatActivity implements Vie
         boolean wpp = checkWpp.isChecked();
         boolean barba = checkBarba.isChecked();
         boolean corte = checkCorte.isChecked();
+        boolean pigmentar = checkPigmentar.isChecked();
+        boolean platinar = checkPlatinar.isChecked();
 
         if (!nome.isEmpty() || !contato.isEmpty()){
             //--------------------------------
@@ -79,8 +88,8 @@ public class AgendamentoServicoActivity extends AppCompatActivity implements Vie
             }else{
                 //--------------------------------------------
                 if (Util.statusInternet_MoWi(getBaseContext())){
-                    Agendamento agendamento = new Agendamento(nome, contato,wpp,barba,corte);
-                    agendarFirebase(nome,contato,wpp,barba,corte);
+                    Agendamento agendamento = new Agendamento(nome, contato,wpp,barba,corte,pigmentar,platinar);
+                    agendarFirebase(nome,contato,wpp,barba,corte,pigmentar,platinar);
                     limparCampos();
 
                 }else{
@@ -99,14 +108,17 @@ public class AgendamentoServicoActivity extends AppCompatActivity implements Vie
         editTelefone.setText("");
         checkCorte.setChecked(false);
         checkBarba.setChecked(false);
+        checkPigmentar.setChecked(false);
+        checkPlatinar.setChecked(false);
+
     }
 
 
 
     //-------------------------------- AÇÃO DE AGENDAR NO FIREBASE ------------------------------
 
-    private void agendarFirebase(String nome, String contato, boolean wpp, boolean barba, boolean corte){
-        Agendamento agendamento = new Agendamento(nome,contato,wpp,barba,corte);
+    private void agendarFirebase(String nome, String contato, boolean wpp, boolean barba, boolean corte, boolean pigmentar, boolean platinar){
+        Agendamento agendamento = new Agendamento(nome,contato,wpp,barba,corte,pigmentar,platinar);
 
         final DialogProgress dialogProgress = new DialogProgress();
         dialogProgress.show(getSupportFragmentManager(),"dialog");

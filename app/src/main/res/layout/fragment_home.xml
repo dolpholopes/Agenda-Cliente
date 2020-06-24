@@ -6,9 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.FragmentHome">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
     <LinearLayout
         android:padding="15dp"
@@ -35,16 +32,17 @@
         </RelativeLayout>
 
         <TextView
+            android:textSize="25sp"
             android:textStyle="bold"
             android:textColor="@color/colorBlack"
             android:gravity="center"
             android:layout_gravity="center"
-            android:text="Nosso App"
+            android:text="Bem vindo ao nosso app!"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView_Contato"
+            android:id="@+id/cardView_Servicos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="2dp"
@@ -53,6 +51,7 @@
             android:foreground="?attr/selectableItemBackground">
 
             <LinearLayout
+                android:paddingTop="25dp"
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:layout_gravity="center"
@@ -60,56 +59,106 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/textView_ContatoEndereco"
-                    android:text="(32)999173670"
-                    android:layout_width="130dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:id="@+id/textView_PrecosProdutos"
+                    android:text="Nossos serviços"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:textSize="15sp"/>
+                    android:textSize="20sp"/>
                 <ImageView
+                    android:paddingLeft="7dp"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/home_whatsapp"/>
+                    android:src="@drawable/list_icon"/>
             </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView_Localizacao"
+
+        <LinearLayout
+            android:paddingTop="25dp"
+
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="2dp"
-            app:cardElevation="3dp"
-            app:cardUseCompatPadding="true"
-            android:foreground="?attr/selectableItemBackground">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_gravity="center"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/cardView_Contato"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true"
+                android:foreground="?attr/selectableItemBackground">
 
-                <TextView
-                    android:text="nossa localização"
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:gravity="center"
-                    android:textSize="15sp"/>
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/home_localizacao"/>
-            </LinearLayout>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/textView_ContatoEndereco"
+                        android:text="(32)999173670"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="15sp"/>
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/home_whatsapp"/>
+                </LinearLayout>
 
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:id="@+id/cardView_Localizacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:text="nossa localização"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="15sp"/>
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/home_localizacao"/>
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+
 
 
     </LinearLayout>
-
-    </ScrollView>
 
 </FrameLayout>

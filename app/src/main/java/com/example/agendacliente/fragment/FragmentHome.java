@@ -30,6 +30,8 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
 import com.example.agendacliente.R;
+import com.example.agendacliente.ServicosActivity;
+import com.example.agendacliente.activity.HorariosActivity;
 import com.example.agendacliente.util.Util;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -42,8 +44,9 @@ import com.google.firebase.database.ValueEventListener;
  */
 public class FragmentHome extends Fragment implements View.OnClickListener {
 
-       private CardView cardView_ligacao;
+    private CardView cardView_ligacao;
     private CardView cardView_localizacao;
+    private CardView cardView_Servicos;
 
     private String latitude_Empresa = "-21.655028";
     private String longitude_Empresa = "-42.344162";
@@ -69,9 +72,11 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
 
         cardView_ligacao = view.findViewById(R.id.cardView_Contato);
         cardView_localizacao = view.findViewById(R.id.cardView_Localizacao);
+        cardView_Servicos = view.findViewById(R.id.cardView_Servicos);
 
         cardView_ligacao.setOnClickListener(this);
         cardView_localizacao.setOnClickListener(this);
+        cardView_Servicos.setOnClickListener(this);
 
         return view;
     }
@@ -92,6 +97,10 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
 
             case R.id.cardView_Localizacao:
                click_AbrirLocalizacao();
+                break;
+
+            case R.id.cardView_Servicos:
+                click_AbrirServicos();
                 break;
         }
     }
@@ -186,5 +195,9 @@ public class FragmentHome extends Fragment implements View.OnClickListener {
     }
 
 
+    private void click_AbrirServicos(){
+        Intent intent = new Intent(getContext(), ServicosActivity.class);
+        startActivity(intent);
+    }
 
 }
