@@ -50,7 +50,7 @@
                 <TextView
                     android:layout_weight="1"
                     android:textColor="@color/colorBlack"
-                    android:text="Corte \nCorte com tesoura | Maquina"
+                    android:text=" Corte \n Corte com tesoura | Maquina"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
@@ -81,7 +81,7 @@
                 <TextView
                     android:layout_weight="1"
                     android:textColor="@color/colorBlack"
-                    android:text="Barba \nAparo da barba | Desenho"
+                    android:text=" Barba \n Aparo da barba | Desenho"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
@@ -112,7 +112,7 @@
                 <TextView
                     android:layout_weight="1"
                     android:textColor="@color/colorBlack"
-                    android:text="Pigmentação \nCorte copm pigmentação"
+                    android:text=" Pigmentação \n Corte copm pigmentação"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
@@ -143,7 +143,7 @@
                 <TextView
                     android:layout_weight="1"
                     android:textColor="@color/colorBlack"
-                    android:text="Planitação \nCorte com platinação"
+                    android:text=" Planitação \n Corte com platinação"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
