@@ -19,11 +19,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView
+        android:layout_marginTop="10dp"
         android:textColor="@color/colorBlack"
         android:text="Telefone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
+        android:inputType="number"
         android:hint="Telefone"
         android:id="@+id/editAgendamentoTelefone"
         android:layout_width="match_parent"
@@ -35,6 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
+        android:layout_marginTop="10dp"
         android:textColor="@color/colorBlack"
         android:text="serviço"
         android:layout_width="match_parent"
@@ -46,14 +49,14 @@
         android:layout_height="wrap_content">
         <CheckBox
             android:layout_weight="1"
-            android:id="@+id/checkCorte"
-            android:text="Corte"
+            android:id="@+id/checkBarba"
+            android:text="Barba"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <CheckBox
             android:layout_weight="1"
-            android:id="@+id/checkBarba"
-            android:text="Barba"
+            android:id="@+id/checkCorte"
+            android:text="Corte"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <CheckBox
@@ -70,7 +73,6 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
-
     <androidx.cardview.widget.CardView
         android:layout_marginTop="25sp"
         android:id="@+id/cardViewAgendar"
@@ -80,9 +82,15 @@
         app:cardCornerRadius="2dp"
         android:layout_gravity="center"
         android:layout_width="145dp"
-        android:layout_height="45dp">
+        android:layout_height="45dp"
+        app:cardBackgroundColor="@color/colorPrimary">
 
         <TextView
+            android:background="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
             android:text="Agendar"
             android:layout_gravity="center"
             android:layout_width="match_parent"
