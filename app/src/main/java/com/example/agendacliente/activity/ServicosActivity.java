@@ -1,4 +1,4 @@
-package com.example.agendacliente;
+package com.example.agendacliente.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import com.example.agendacliente.MainActivity;
+import com.example.agendacliente.R;
 
 public class ServicosActivity extends AppCompatActivity {
 
