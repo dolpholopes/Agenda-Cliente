@@ -83,7 +83,7 @@ public class AgendamentoServicoActivity extends AppCompatActivity implements Vie
 
         if (!nome.isEmpty() || !contato.isEmpty()){
             //--------------------------------
-            if (!corte && !barba){
+            if (!corte && !barba && !pigmentar && !platinar){
                 Toast.makeText(getBaseContext(), "Escolha qual o serviço desejado", Toast.LENGTH_SHORT).show();
             }else{
                 //--------------------------------------------

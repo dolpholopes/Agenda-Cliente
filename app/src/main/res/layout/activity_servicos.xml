@@ -112,7 +112,7 @@
                 <TextView
                     android:layout_weight="1"
                     android:textColor="@color/colorBlack"
-                    android:text=" Pigmentação \n Corte copm pigmentação"
+                    android:text=" Pigmentação \n Corte com pigmentação"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
