@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ServicosActivity"></activity>
         <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.HorariosActivity" />
+        <activity android:name=".activity.HorariosActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".activity.AgendamentoServicoActivity" />
         <activity android:name=".MainActivity" />
     </application>
