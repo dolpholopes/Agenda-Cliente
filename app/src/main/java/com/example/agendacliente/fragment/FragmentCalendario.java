@@ -59,7 +59,6 @@ public class FragmentCalendario extends Fragment implements CalendarView.OnDateC
         versaoLollipop();
 
         return view;
-
     }
 
     //----------------------------- OBTER DATA ATUAL ---------------------------------------------
@@ -76,7 +75,6 @@ public class FragmentCalendario extends Fragment implements CalendarView.OnDateC
         mes_atual = Integer.parseInt(mes.format(dataLong));
         ano_atual = Integer.parseInt(ano.format(dataLong));
 
-        Toast.makeText(getContext(), "Hoje e dia: "+ dia_atual + "/" + mes_atual + "/" + ano_atual, Toast.LENGTH_SHORT).show();
     }
 
 

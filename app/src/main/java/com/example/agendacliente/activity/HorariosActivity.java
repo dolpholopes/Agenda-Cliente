@@ -41,6 +41,9 @@ public class HorariosActivity extends AppCompatActivity implements AdapterListVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horarios);
+
+        getSupportActionBar().hide();
+
         listView = findViewById(R.id.listView);
         database = FirebaseDatabase.getInstance();
         data = getIntent().getStringArrayListExtra("data");

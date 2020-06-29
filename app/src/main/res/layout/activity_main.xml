@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/colorWhite"
+        app:title="Meu Barbeiro"/>
+
     <FrameLayout
         android:id="@+id/frameLayout_Fragment"
         android:layout_width="match_parent"
@@ -20,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="#FFF"
+        app:itemRippleColor="@color/colorAccent"
         app:menu="@menu/navegacao">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>

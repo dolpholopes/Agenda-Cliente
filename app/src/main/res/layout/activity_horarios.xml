@@ -5,10 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="15dp"
     tools:context=".activity.HorariosActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/colorWhite"
+        app:title="Meu Barbeiro"/>
     <ListView
+        android:padding="16dp"
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

@@ -1,11 +1,12 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
     <style name="CalendarioTexto" parent="@style/TextAppearance.AppCompat.Small">
@@ -15,5 +16,10 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
         <item name="android:textSize">18sp</item>
     </style>
+
+    <style name="MyActionBarTitleText" parent="AppTheme">
+        <item name="android:textColor">#dfab71</item>
+    </style>
+
     
 </resources>

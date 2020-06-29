@@ -38,12 +38,12 @@
 
             <CalendarView
                 android:id="@+id/calendarView_Calendario"
-                android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/AppTheme.PopupOverlay"
+                android:layout_gravity="center"
                 android:dateTextAppearance="@style/CalendarioTexto"
-                android:showWeekNumber="true">
+                android:showWeekNumber="true"
+                android:theme="@style/AppTheme.PopupOverlay">
 
             </CalendarView>
 

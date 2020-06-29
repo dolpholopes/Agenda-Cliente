@@ -6,14 +6,15 @@
     <item
         android:id="@+id/item_navegacao_calendario"
         android:icon="@drawable/ic_calendar"
-        android:title="Calendario"/>
+        android:title="Agendar"/>
     <item
         android:id="@+id/item_navegacao_servicos"
         android:icon="@drawable/ic_list"
-        android:title="Servicos"/>
+        android:title="Nossos Servicos"/>
     <item
         android:id="@+id/item_localizacao"
         android:icon="@drawable/ic_map"
         android:title="Localização"/>
+
 
 </menu>
